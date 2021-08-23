@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label for="cantidad">Ingrese cantidad</label>
+                <input type="number" class="form-control form-control-lg" [(ngModel)]='cantidad' (input)='convertir()' id="cantidad"
+                    placeholder="Ingrese su monto a convertir...">
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label for="tengo">Tengo:</label>
+                <select class="form-control" id="tengo" (change)='convertir()' [(ngModel)]='tengo'>
+                    <option value="UYU">Peso uruguayo</option>
+                    <option value="USD" >Dolar estadounidense</option>
+                    <option value="CAD" >Dolar Canadiense</option>
+                    <option value="EUR" >Euro</option>
+                    <option value="GBP" >Libra</option>
+                    <option value="BRL" >Real brasileño</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label for="quiero">Quiero:</label>
+                <select class="form-control" id="quiero" (change)='convertir()' [(ngModel)]='quiero'>
+                    <option value="UYU" >Peso uruguayo</option>
+                    <option value="USD" >Dolar estadounidense</option>
+                    <option value="CAD" >Dolar Canadiense</option>
+                    <option value="EUR" >Euro</option>
+                    <option value="GBP" >Libra</option>
+                    <option value="BRL" >Real brasileño</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center" *ngIf='cantidad != 0 && cantidad != null'>
+        <span class="badge bg-success">{{cantidad}} {{tengo}}</span>
+        <span class="badge bg-secondary">son</span>
+        <span class="badge bg-success">{{total}} {{quiero}}</span>
+    </div>
+</div>

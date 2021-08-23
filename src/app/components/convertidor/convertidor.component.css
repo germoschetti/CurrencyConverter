@@ -1,0 +1,19 @@
+.badge{
+    padding: 10px;
+    font-size: 1em;
+    margin: 10px;
+    margin-top: 40px;
+}
+
+.container{
+    margin-top: 70px;
+}
+
+label{
+    font-size: large;
+    color: white;
+}
+
+span{
+    color: white;
+}
